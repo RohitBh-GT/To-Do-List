@@ -1,13 +1,18 @@
 import React from 'react';
-import Header from './components/Header/Header.js';
-import ListGrid from './components/ListGrid/ListGrid.js';
+import { BrowserRouter,Switch,Route } from 'react-router-dom';
+import Home from './components/Home/home.js';
+import SingleList from './components/SingleList/singleList.js';
+import { Component } from 'react';
 
 function App(){
+
     return (
-        <>
-          <Header />
-          <ListGrid />
-        </>
+        <BrowserRouter>
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route exact path="/lists/:id" render={(props) => <SingleList {...props} /> } />
+          </Switch>
+        </BrowserRouter>
     );
 }
 

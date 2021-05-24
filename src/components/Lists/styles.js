@@ -1,11 +1,11 @@
-import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme)=>({
     Paper:{
         border:'1px solid black',
         borderRadius:'10px',
-        backgroundColor:'#fae07a',
+        backgroundColor: '#fae07a',
+        backgroundImage: 'url("https://www.transparenttextures.com/patterns/connected.png")',
         padding:'1rem',
     },
     Typography:{
